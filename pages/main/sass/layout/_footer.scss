@@ -1,0 +1,114 @@
+.footer {
+  background: $bg-gradient;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 4rem 4rem 0;
+    @media screen and (max-width: $breakpoint-1) {
+      max-width: 70.8rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 6.1rem;
+      padding: 3rem 0 0;
+    }
+    @media screen and (max-width: $breakpoint-2) {
+      max-width: 30rem;
+      row-gap: 4rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 6rem;
+    @media screen and (max-width: $breakpoint-1) {
+      min-height: 29.4rem;
+    }
+    @media screen and (max-width: $breakpoint-2) {
+      align-items: center;
+      row-gap: 4rem;
+      padding-bottom: 0;
+      min-height: auto;
+    }
+  }
+
+  &__item:first-child {
+    width: 27.9rem;
+  }
+
+  &__item:nth-child(2) {
+    width: 30.2rem;
+  }
+
+  &__title {
+    @extend %h3;
+    color: $color-light-xl;
+    padding-top: 1.6rem;
+    @media screen and (max-width: $breakpoint-1) {
+      padding-top: 0;
+    }
+    @media screen and (max-width: $breakpoint-2) {
+      @include h3-mobile();
+      text-align: center;
+      padding: 0 1rem;
+    }
+  }
+
+  &__subtitle {
+    display: flex;
+    justify-content: flex-start;
+    @extend %h4;
+    text-align: left;
+    color: $color-primary;
+  }
+
+  &__subtitle--mobile {
+    @media screen and (max-width: $breakpoint-2) {
+      align-self: start;
+    }
+  }
+
+  &__link {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+  }
+
+  &__link--email {
+    padding: 0.5rem 0 0.4rem 6rem;
+    background-image: url("../../assets/icons/footer/icon-email.svg");
+  }
+
+  &__link--phone {
+    padding: 0.5rem 0 0.4rem 6rem;
+    background-image: url("../../assets/icons/footer/icon-phone.svg");
+  }
+
+  &__link--mark {
+    padding-left: 4.2rem;
+    background-image: url("../../assets/icons/footer/icon-marker.svg");
+  }
+
+  &__link--mark-1 {
+    padding: 0.5rem 0 0.4rem 4.2rem;
+  }
+
+  &__img-wrapper {
+    @media screen and (max-width: $breakpoint-2) {
+      width: 26rem;
+      height: 26.9rem;
+    }
+  }
+
+  &__img {
+    display: block;
+    @media screen and (max-width: $breakpoint-2) {
+      width: 100%;
+    }
+  }
+}
